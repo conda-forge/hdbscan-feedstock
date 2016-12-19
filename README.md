@@ -1,7 +1,7 @@
 About hdbscan
 =============
 
-Home: http://github.com/scikit-learn-contrib/hdbscan
+Home: http://github.com/lmcinnes/hdbscan
 
 Package license: BSD 3-Clause
 
@@ -10,6 +10,18 @@ Feedstock license: BSD 3-Clause
 Summary: Clustering based on density with variable density clusters
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/hdbscan-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/hdbscan-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/hdbscan-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/hdbscan-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/hdbscan-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/hdbscan-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hdbscan/badges/version.svg)](https://anaconda.org/conda-forge/hdbscan)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hdbscan/badges/downloads.svg)](https://anaconda.org/conda-forge/hdbscan)
 
 Installing hdbscan
 ==================
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `hdbscan` available on your platfo
 ```
 conda search hdbscan --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/hdbscan-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/hdbscan-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/hdbscan-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/hdbscan-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/hdbscan-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/hdbscan-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hdbscan/badges/version.svg)](https://anaconda.org/conda-forge/hdbscan)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hdbscan/badges/downloads.svg)](https://anaconda.org/conda-forge/hdbscan)
 
 
 Updating hdbscan-feedstock
