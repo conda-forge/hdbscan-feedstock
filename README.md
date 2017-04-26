@@ -1,7 +1,7 @@
 About hdbscan
 =============
 
-Home: http://github.com/scikit-learn-contrib/hdbscan
+Home: http://github.com/lmcinnes/hdbscan
 
 Package license: BSD 3-Clause
 
