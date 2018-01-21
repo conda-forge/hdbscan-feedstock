@@ -1,4 +1,4 @@
-{% set version = "0.8.11" %}
+{% set version = "0.8.12" %}
 
 package:
   name: hdbscan
@@ -7,7 +7,7 @@ package:
 source:
   fn: hdbscan-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
-  sha256: 5bc6f5e5c70612394408843697b9566b4e4feae95b9191656b82d8f8816cbf13
+  sha256: 39620799b408aa1e1a1297b84b70437ddd821ff1589044e5f65c8a971d19b17b
 
 build:
   number: 0
