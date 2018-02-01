@@ -10,14 +10,8 @@ source:
   sha256: 39620799b408aa1e1a1297b84b70437ddd821ff1589044e5f65c8a971d19b17b
 
 build:
-  number: 0
+  number: 1
   script: 
-    # FIXME: This is a hack to make sure the environment is activated.
-    # The reason this is required is due to the conda-build issue
-    # mentioned below.
-    #
-    # https://github.com/conda/conda-build/issues/910
-    #
     - source activate "${CONDA_DEFAULT_ENV}"  # [unix]
     - python setup.py install --single-version-externally-managed --record record.txt
 
@@ -28,10 +22,17 @@ requirements:
     - setuptools
     - scikit-learn >=0.16
     - cython >=0.17
+    # 1.9 is the earliest for scikit-learn 0.16
+    - numpy 1.9.*  # [not (win and (py35 or py36))]
+    - numpy 1.9.*  # [win and py35]
+    - numpy 1.11.*  # [win and py36]
 
   run:
     - python
     - scikit-learn >=0.16
+    - numpy >=1.9  # [not (win and (py35 or py36))]
+    - numpy >=1.9  # [win and py35]
+    - numpy >=1.11  # [win and py36]
 
 test:
   imports:
