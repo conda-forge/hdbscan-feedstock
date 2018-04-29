@@ -14,14 +14,16 @@ Summary: Clustering based on density with variable density clusters
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/hdbscan-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/hdbscan-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/hdbscan-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/hdbscan-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/hdbscan-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/hdbscan-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/hdbscan-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/hdbscan-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/hdbscan-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/hdbscan-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/hdbscan-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/hdbscan-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hdbscan/badges/version.svg)](https://anaconda.org/conda-forge/hdbscan)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/hdbscan/badges/downloads.svg)](https://anaconda.org/conda-forge/hdbscan)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-hdbscan-green.svg)](https://anaconda.org/conda-forge/hdbscan) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hdbscan.svg)](https://anaconda.org/conda-forge/hdbscan) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hdbscan.svg)](https://anaconda.org/conda-forge/hdbscan) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hdbscan.svg)](https://anaconda.org/conda-forge/hdbscan) |
 
 Installing hdbscan
 ==================
