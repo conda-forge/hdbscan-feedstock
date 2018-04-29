@@ -1,4 +1,4 @@
-{% set version = "0.8.12" %}
+{% set version = "0.8.13" %}
 
 package:
   name: hdbscan
@@ -7,10 +7,10 @@ package:
 source:
   fn: hdbscan-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
-  sha256: 39620799b408aa1e1a1297b84b70437ddd821ff1589044e5f65c8a971d19b17b
+  sha256: 31874db29375816688b5541287a051c9bd768f2499ccf1f6a4d88d266530e2a6
 
 build:
-  number: 1
+  number: 0
   script: 
     - source activate "${CONDA_DEFAULT_ENV}"  # [unix]
     - python setup.py install --single-version-externally-managed --record record.txt
