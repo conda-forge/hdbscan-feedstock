@@ -10,7 +10,7 @@ source:
   sha256: 4d6782f08872f4c54983873a41759daae680d6247b0db363f3510cb001108f02
 
 build:
-  number: 0
+  number: 1000
   script:
     - source activate "${CONDA_DEFAULT_ENV}"  # [unix]
     - python setup.py install --single-version-externally-managed --record record.txt
