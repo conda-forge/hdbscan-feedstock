@@ -10,7 +10,7 @@ source:
   sha256: 5cfdc25375123eb9a72363449979141cc928c1953f220f0f81d7baabcaccec2d
 
 build:
-  number: 0
+  number: 1
   script:
     - source activate "${CONDA_DEFAULT_ENV}"  # [unix]
     - python setup.py install --single-version-externally-managed --record record.txt
@@ -23,6 +23,7 @@ requirements:
     - setuptools
     - scikit-learn >=0.16
     - cython >=0.17
+    - joblib
     # 1.9 is the earliest for scikit-learn 0.16
     - numpy        # [not (win and (py35 or py36))]
     - numpy        # [win and py35]
@@ -31,6 +32,7 @@ requirements:
   run:
     - python
     - scikit-learn >=0.16
+    - joblib
     - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
     - {{ pin_compatible('numpy') }}   # [win and py35]
     - {{ pin_compatible('numpy') }}   # [win and py36]
