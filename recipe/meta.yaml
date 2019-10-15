@@ -8,9 +8,8 @@ source:
   fn: hdbscan-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: ff60c66591452ceb6bdb7592c560a1ebc7e128a02dd3880e048861f7fea7f78d
-
 build:
-  number: 0
+  number: 1
   script:
     - source activate "${CONDA_DEFAULT_ENV}"  # [unix]
     - python setup.py install --single-version-externally-managed --record record.txt
@@ -23,6 +22,7 @@ requirements:
     - setuptools
     - scikit-learn >=0.16
     - cython >=0.17
+    - joblib
     # 1.9 is the earliest for scikit-learn 0.16
     - numpy        # [not (win and (py35 or py36))]
     - numpy        # [win and py35]
