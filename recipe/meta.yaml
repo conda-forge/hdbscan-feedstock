@@ -1,4 +1,4 @@
-{% set version = "0.8.21" %}
+{% set version = "0.8.23" %}
 
 package:
   name: hdbscan
@@ -7,7 +7,7 @@ package:
 source:
   fn: hdbscan-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
-  sha256: 1bf3132763d4d3dc5678f037003b6df657a242437743060787566d6fcaec52b5
+  sha256: ff60c66591452ceb6bdb7592c560a1ebc7e128a02dd3880e048861f7fea7f78d
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - python
     - scikit-learn >=0.16
     - joblib
+    - six
     - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
     - {{ pin_compatible('numpy') }}   # [win and py35]
     - {{ pin_compatible('numpy') }}   # [win and py36]
