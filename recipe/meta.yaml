@@ -9,7 +9,7 @@ source:
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: fe31a7ea0ce2c9babd190a195e491834ff9f64c74daa4ca94fa65a88f701269a
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
