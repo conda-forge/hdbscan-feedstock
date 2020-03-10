@@ -1,4 +1,4 @@
-{% set version = "0.8.24" %}
+{% set version = "0.8.25" %}
 
 package:
   name: hdbscan
@@ -7,10 +7,10 @@ package:
 source:
   fn: hdbscan-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
-  sha256: fe31a7ea0ce2c9babd190a195e491834ff9f64c74daa4ca94fa65a88f701269a
+  sha256: 92cccf0cfcb544007529841a387e97379cfe5d2d33ab620777cf2b17a925b19e
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -44,7 +44,7 @@ about:
   home: http://github.com/lmcinnes/hdbscan
   license: BSD 3-Clause
   license_file: LICENSE
-  summary: 'Clustering based on density with variable density clusters'
+  summary: Clustering based on density with variable density clusters
 
 extra:
   recipe-maintainers:
