@@ -3,28 +3,30 @@
 
 language: generic
 
-env:
-  global:
-    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "d8EX1Z1Qd6NdTetvyCTlbc3d2RadRK5lG6PKOwjyC/qT6RQLFHLKj/kYBRjp+lspE7HK5/nWvElGbJCRxg40vDN604lq8cHN412ZQeQZBChSBDtwFtVgin0iwFutnnfS3WWN9h8id6ez0AbzvbpKynbmhmwoKa4oD/R1L4ojHWKLK7qmaPeuO7HZv/UC4AmVE+Wt/0tNt5jSoWF8kzF3VIiNZl7xzycBqxDusOr35SBvX+XWomAqW3BlwAAR3/hxWreMHEJxoOEQPOfj1ulKuG/zbivTTUWqyKbrcfI4ca3BbeZc+mRKjIDCl/P23RRkYgiDSbaNoZzoXXQHiQGKbzmRdM+IrH8wYpw4FKzT9qckqL/xap+6YcDw7ffUzh01ETvbs3MZ8maDVCOmPZ1KLFRKzaKaUyqAr/6UkW6Q77R5tBotDMOxIHXcWtg64AdHfWm1r/2d0Gqtz8PQ1oY9hmgReELtaUrgHrgONctztoBQCQfucC0v52gMkeZGPLFgvIEWXdmpJGHyn/rPga8SMP0fCqrwAeqEcVt/uJPfrW6AOufpjVtvNHLzQcCLwodNswqfUKvrEEJA6XylfFCax8rcilta3ZAn0VIo5hlJoOtvhdcVUnJv39eZRqSCdfqCX7jRabEMugg8il+EdFFKPqzqmZ483QoLiSJDFt4ZqhM="
+
 
 matrix:
   include:
-    - env: CONFIG=linux_ppc64le_python3.6.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_numpy1.16python3.6.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
-    - env: CONFIG=linux_ppc64le_python3.7.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_numpy1.16python3.7.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
-    - env: CONFIG=linux_ppc64le_python3.8.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_numpy1.16python3.8.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+      os: linux
+      arch: ppc64le
+
+    - env: CONFIG=linux_ppc64le_numpy1.18python3.6.____73_pypy UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
 script:
   - export CI=travis
   - export GIT_BRANCH="$TRAVIS_BRANCH"
+  - export FEEDSTOCK_NAME=$(basename ${TRAVIS_REPO_SLUG})
 
 
   - if [[ ${PLATFORM} =~ .*linux.* ]]; then ./.scripts/run_docker_build.sh; fi
