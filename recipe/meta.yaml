@@ -5,7 +5,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: hdbscan-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: 7e9d7351610eaadddb281e3149a74e22e329bc0b5325f631031d4b63a6a770ae
 build:
@@ -26,19 +25,14 @@ requirements:
     - scikit-learn >=0.16
     - cython >=0.17
     - joblib
-    # 1.9 is the earliest for scikit-learn 0.16
-    - numpy        # [not (win and (py35 or py36))]
-    - numpy        # [win and py35]
-    - numpy         # [win and py36]
+    - numpy
 
   run:
     - python
     - scikit-learn >=0.16
     - joblib
     - six
-    - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
-    - {{ pin_compatible('numpy') }}   # [win and py35]
-    - {{ pin_compatible('numpy') }}   # [win and py36]
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
@@ -46,7 +40,7 @@ test:
 
 about:
   home: http://github.com/lmcinnes/hdbscan
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Clustering based on density with variable density clusters
 
