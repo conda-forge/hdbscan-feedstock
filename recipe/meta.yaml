@@ -32,6 +32,7 @@ requirements:
     - scikit-learn >=0.16
     - joblib
     - six
+    - cython >=0.17
     - {{ pin_compatible('numpy') }}
 
 test:
