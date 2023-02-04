@@ -3,7 +3,7 @@ About hdbscan
 
 Home: http://github.com/lmcinnes/hdbscan
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdbscan-feedstock/blob/main/LICENSE.txt)
 
@@ -323,5 +323,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@johnlees](https://github.com/johnlees/)
 * [@lmcinnes](https://github.com/lmcinnes/)
 
