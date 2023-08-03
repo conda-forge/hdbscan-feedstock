@@ -3,7 +3,7 @@ About hdbscan-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdbscan-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/lmcinnes/hdbscan
+Home: http://github.com/scikit-learn-contrib/hdbscan
 
 Package license: BSD-3-Clause
 

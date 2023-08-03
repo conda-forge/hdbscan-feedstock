@@ -40,7 +40,7 @@ test:
     - hdbscan
 
 about:
-  home: http://github.com/lmcinnes/hdbscan
+  home: http://github.com/scikit-learn-contrib/hdbscan
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Clustering based on density with variable density clusters
