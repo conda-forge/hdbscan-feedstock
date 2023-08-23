@@ -15,7 +15,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython >=0.27,<3                       # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
@@ -23,7 +23,7 @@ requirements:
     - pip
     - setuptools
     - scikit-learn >=0.16
-    - cython >=0.17
+    - cython >=0.27,<3
     - joblib
     - numpy
 
@@ -32,12 +32,18 @@ requirements:
     - scikit-learn >=0.16
     - joblib
     - six
-    - cython >=0.17
+    - cython >=0.27,<3
     - {{ pin_compatible('numpy') }}
 
 test:
   imports:
     - hdbscan
+  requires:
+    - matplotlib
+  source_files:
+    - examples/plot_hdbscan.py
+  commands:
+    - python ploy_hdbscan.py
 
 about:
   home: http://github.com/scikit-learn-contrib/hdbscan
