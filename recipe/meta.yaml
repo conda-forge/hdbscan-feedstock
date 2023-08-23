@@ -43,7 +43,7 @@ test:
   source_files:
     - examples/plot_hdbscan.py
   commands:
-    - python ploy_hdbscan.py
+    - python plot_hdbscan.py
 
 about:
   home: http://github.com/scikit-learn-contrib/hdbscan
