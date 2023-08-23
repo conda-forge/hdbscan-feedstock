@@ -1,0 +1,25 @@
+From 5b6401a88d89a7c0cded7a83fac0cec379d1d249 Mon Sep 17 00:00:00 2001
+From: John Lees <lees.john6@gmail.com>
+Date: Wed, 23 Aug 2023 16:55:04 +0100
+Subject: [PATCH] Update sklearn api
+
+---
+ examples/plot_hdbscan.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/examples/plot_hdbscan.py b/examples/plot_hdbscan.py
+index b77046c..db5cd51 100644
+--- a/examples/plot_hdbscan.py
++++ b/examples/plot_hdbscan.py
+@@ -16,7 +16,7 @@ import numpy as np
+ from hdbscan import HDBSCAN
+ from sklearn.cluster import DBSCAN
+ from sklearn import metrics
+-from sklearn.datasets.samples_generator import make_blobs
++from sklearn.datasets import make_blobs
+ from sklearn.preprocessing import StandardScaler
+ 
+ import time
+-- 
+2.39.2 (Apple Git-143)
+
