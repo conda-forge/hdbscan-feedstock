@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: 57fabc5f0e45f48d2407b35c731192abc896376411fe7e4bb836ffa03d38f90d
-  patches:
-    - 0001-Update-sklearn-api.patch
 build:
   number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -40,12 +38,8 @@ requirements:
 test:
   imports:
     - hdbscan
-  requires:
-    - matplotlib
-  source_files:
-    - examples/plot_hdbscan.py
   commands:
-    - python examples/plot_hdbscan.py
+    - python run_test.py
 
 about:
   home: http://github.com/scikit-learn-contrib/hdbscan
