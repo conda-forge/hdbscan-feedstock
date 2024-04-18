@@ -8,7 +8,7 @@ source:
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: 57fabc5f0e45f48d2407b35c731192abc896376411fe7e4bb836ffa03d38f90d
 build:
-  number: 4
+  number: 5
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -32,7 +32,7 @@ requirements:
     - scikit-learn >=0.16
     - joblib
     - six
-    - cython
+    - cython >=0.27,<3
     - {{ pin_compatible('numpy') }}
 
 test:
