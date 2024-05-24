@@ -1,4 +1,4 @@
-{% set version = "0.8.33" %}
+{% set version = "0.8.36" %}
 
 package:
   name: hdbscan
@@ -6,9 +6,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
-  sha256: 57fabc5f0e45f48d2407b35c731192abc896376411fe7e4bb836ffa03d38f90d
+  sha256: d398acb69e0c4ebdf539c2ba5839c523360ec814f300faa7f2f87de8f257af58
 build:
-  number: 5
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -18,6 +18,7 @@ requirements:
     - cython >=0.27,<3                       # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
