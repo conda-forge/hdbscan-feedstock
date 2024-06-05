@@ -16,16 +16,17 @@ requirements:
     - python
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >=0.27,<3
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
     - pip
+    - cython >=0.27,<3    
     - setuptools
     - scikit-learn >=0.16
     - joblib
-    - numpy
+    - {{ pin_compatible('numpy') }}
 
   run:
     - python
