@@ -7,38 +7,45 @@ package:
 source:
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: 5fbdba2ffb5a99a8b52fa2915658ced6bed59f4d0d5f40b1c673646c928aac0b
+
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython >=0.27,<3                       # [build_platform != target_platform]
-    - numpy <2                               # [build_platform != target_platform]
-    - {{ compiler('c') }}
+    - cython <4                              # [build_platform != target_platform]
+    - numpy <3                               # [build_platform != target_platform]
+    # Keep unconstrained for conda-smithy re-rendering
+    - numpy                                  # [build_platform != target_platform]
+    - {{ compiler("c") }}
     - {{ stdlib("c") }}
   host:
     - python
     - pip
     - setuptools
-    - scikit-learn >=0.16
-    - cython >=0.27,<3
-    - joblib
-    - numpy <2
-
+    - wheel
+    - cython <4
+    - numpy <3
+    # Keep unconstrained for conda-smithy re-rendering
+    - numpy
   run:
     - python
-    - scikit-learn >=0.16
-    - joblib
-    - six
-    - {{ pin_compatible('numpy') }}
+    # Match upstream's `numpy` requirement and constraint
+    - numpy >=1.20,<3
+    - scipy >=1.0
+    - scikit-learn >=0.20
+    - joblib >=1.0
 
 test:
+  requires:
+    - pip
   imports:
     - hdbscan
   commands:
+    - pip check
     - python run_test.py
 
 about:
