@@ -29,9 +29,9 @@ requirements:
     - numpy
   run:
     - python
-    - scikit-learn >=0.16
-    - joblib
-    - six
+    - scipy >=1.0
+    - scikit-learn >=0.20
+    - joblib >=1.0
 
 test:
   requires:
