@@ -16,8 +16,8 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython >=0.27,<3                       # [build_platform != target_platform]
-    - numpy <2                               # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -25,15 +25,14 @@ requirements:
     - pip
     - setuptools
     - scikit-learn >=0.16
-    - cython >=0.27,<3
+    - cython
     - joblib
-    - numpy <2
+    - numpy
   run:
     - python
     - scikit-learn >=0.16
     - joblib
     - six
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
