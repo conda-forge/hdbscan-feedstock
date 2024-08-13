@@ -24,6 +24,7 @@ requirements:
     - python
     - pip
     - setuptools
+    - wheel
     - cython
     - numpy
   run:
