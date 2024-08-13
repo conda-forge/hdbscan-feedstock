@@ -35,9 +35,12 @@ requirements:
     - six
 
 test:
+  requires:
+    - pip
   imports:
     - hdbscan
   commands:
+    - pip check
     - python run_test.py
 
 about:
