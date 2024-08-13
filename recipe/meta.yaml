@@ -28,7 +28,6 @@ requirements:
     - cython >=0.27,<3
     - joblib
     - numpy <2
-
   run:
     - python
     - scikit-learn >=0.16
