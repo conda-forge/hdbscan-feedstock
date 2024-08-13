@@ -16,7 +16,9 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython <4                              # [build_platform != target_platform]
+    - numpy <3                               # [build_platform != target_platform]
+    # No constraints so conda-smithy re-rendering works correctly.
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler("c") }}
     - {{ stdlib("c") }}
@@ -25,7 +27,9 @@ requirements:
     - pip
     - setuptools
     - wheel
-    - cython
+    - cython <4
+    - numpy <3
+    # No constraints so conda-smithy re-rendering works correctly.
     - numpy
   run:
     - python
