@@ -18,7 +18,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython <4                              # [build_platform != target_platform]
     - numpy <3                               # [build_platform != target_platform]
-    # No constraints so conda-smithy re-rendering works correctly.
+    # Keep unconstrained for conda-smithy re-rendering
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler("c") }}
     - {{ stdlib("c") }}
@@ -29,7 +29,7 @@ requirements:
     - wheel
     - cython <4
     - numpy <3
-    # No constraints so conda-smithy re-rendering works correctly.
+    # Keep unconstrained for conda-smithy re-rendering
     - numpy
   run:
     - python
