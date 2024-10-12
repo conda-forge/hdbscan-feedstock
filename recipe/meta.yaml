@@ -1,4 +1,4 @@
-{% set version = "0.8.38.post2" %}
+{% set version = "0.8.39" %}
 
 package:
   name: hdbscan
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
-  sha256: 6adcaa6503e27579a028531fc4e0e2f905a0c7f1535d7ad6d32c36764b02fc06
+  sha256: 2aa1351f42fa79efdc47d53695381aa9a2efef6d1855b96c42d030646fee74f7
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
   run:
     - python
     # Match upstream's `numpy` requirement and constraint
-    - numpy
+    - numpy <3,>=1.20
     - scipy >=1.0
     - scikit-learn >=0.20
     - joblib >=1.0
