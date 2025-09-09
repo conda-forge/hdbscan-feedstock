@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/h/hdbscan/hdbscan-{{ version }}.tar.gz
   sha256: 2aa1351f42fa79efdc47d53695381aa9a2efef6d1855b96c42d030646fee74f7
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
